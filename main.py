@@ -40,8 +40,6 @@ def test_admin_replace_pic(admin_enter, driver):
     file_path = get_file_path("pic_urls")
     urls_list = read_urls(file_path)
 
-    # assert check_exists_by_selector(driver, f'img[src="{0}"]') is True
-    # driver.find_element(By.XPATH, '/html/body/div/header/ul/li[2]/form/button').click()
     driver.find_element(By.XPATH, '/html/body/div/header/ul/li[2]/form/button').click()
     assert driver.current_url == globals.update_pic_page
     counter = 1
