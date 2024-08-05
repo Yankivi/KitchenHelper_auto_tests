@@ -11,6 +11,7 @@ def driver():
     yield driver
     driver.quit()
 
+
 @pytest.fixture
 def admin_enter(driver):
     driver.get(globals.main_page)
