@@ -1,5 +1,4 @@
-from selenium import webdriver
-import pytest
+import unittest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select, WebDriverWait
 from selenium.webdriver.common.keys import Keys
@@ -133,3 +132,6 @@ def test_refresh_stat(admin_enter, driver):
         xpath = f'/html/body/div/div/table[{j}]/tbody/tr/th[2]'
         voices = driver.find_element(By.XPATH, f'{xpath}')
         assert voices.text == '0'
+
+if __name__ == "__main__":
+    unittest.main()
